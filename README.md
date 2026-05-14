@@ -21,21 +21,22 @@ The assistant reads the diff and the surrounding code, traces call paths, classi
 Every review produces the same structured report:
 
 ```
-Review target:
-Scope:
-Summary:
+🎯 Review target:
+📂 Scope:
 
-Findings:
-  1. [Severity] Title
-     File: <path>:<line>
-     Evidence:
-     Why it matters:
-     Suggested fix:
+💬 Summary:
 
-Tests / proof:
-Refactor opportunities:
-Remaining risks:
-Verdict:
+🔍 Findings:
+  1. [🔴 Critical / 🟠 High / 🟡 Medium / 🔵 Low / 🔹 Nit] Title
+     📄 File: <path>:<line>
+     🔎 Evidence:
+     💥 Why it matters:
+     🛠️ Suggested fix:
+
+🧪 Tests / proof:
+♻️ Refactor opportunities:
+⚠️ Remaining risks:
+✅ Verdict:
 ```
 
 **Severity levels**
