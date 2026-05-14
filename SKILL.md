@@ -118,11 +118,11 @@ Prefer current source and executable proof over comments, PR descriptions, and s
 
 | Level | When to use |
 |-------|-------------|
-| `Critical` | data loss, security vulnerability, crash in a core path, silent corruption |
-| `High` | incorrect behavior visible to users, broken contract, missing error handling on an important path |
-| `Medium` | logic error in a non-critical path, missing validation, suboptimal handling with user-visible side effects |
-| `Low` | edge case, unclear behavior under unusual input, missing guard that could matter later |
-| `Nit` | style, naming, readability, minor inconsistency with no behavioral impact |
+| 🔴 `Critical` | data loss, security vulnerability, crash in a core path, silent corruption |
+| 🟠 `High` | incorrect behavior visible to users, broken contract, missing error handling on an important path |
+| 🟡 `Medium` | logic error in a non-critical path, missing validation, suboptimal handling with user-visible side effects |
+| 🔵 `Low` | edge case, unclear behavior under unusual input, missing guard that could matter later |
+| 🔹 `Nit` | style, naming, readability, minor inconsistency with no behavioral impact |
 
 ## fix quality bar
 
@@ -142,31 +142,31 @@ Call out when a fix is symptom-level only. If a slightly larger refactor makes t
 Always produce the review in this exact structure:
 
 ```
-Review target: <local diff scope | PR #N | issue #N>
-Scope: <files changed, surface area, affected subsystems>
+🎯 Review target: <local diff scope | PR #N | issue #N>
+📂 Scope: <files changed, surface area, affected subsystems>
 
-Summary: <2–4 sentences describing what changed and the overall assessment>
+💬 Summary: <2–4 sentences describing what changed and the overall assessment>
 
-Findings:
-  1. [Severity] Title
-     File: <path>:<line> or <path>
-     Evidence: <exact code reference, symbol, or behavior>
-     Why it matters: <failure mode or user impact>
-     Suggested fix: <concrete recommendation>
+🔍 Findings:
+  1. [🔴 Critical / 🟠 High / 🟡 Medium / 🔵 Low / 🔹 Nit] Title
+     📄 File: <path>:<line> or <path>
+     🔎 Evidence: <exact code reference, symbol, or behavior>
+     💥 Why it matters: <failure mode or user impact>
+     🛠️ Suggested fix: <concrete recommendation>
 
   2. [Severity] Title
      ...
 
-Tests / proof:
+🧪 Tests / proof:
   <commands run and results, or explicit statement that tests were not run and why>
 
-Refactor opportunities:
+♻️ Refactor opportunities:
   <specific shape of any refactors worth considering, or "none identified">
 
-Remaining risks:
+⚠️ Remaining risks:
   <what is still uncertain, untested, or depends on runtime behavior>
 
-Verdict: <one of: No blocking issues | Needs changes | Needs discussion>
+✅ Verdict: <one of: No blocking issues | Needs changes | Needs discussion>
 ```
 
 If there are no findings, say so explicitly under `Findings:` — do not omit the section.

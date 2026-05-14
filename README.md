@@ -42,11 +42,11 @@ Verdict:
 
 | Level | When to use |
 |-------|-------------|
-| `Critical` | data loss, security vulnerability, crash in a core path |
-| `High` | incorrect behavior visible to users, broken contract |
-| `Medium` | logic error in a non-critical path, missing validation |
-| `Low` | edge case or missing guard with future impact |
-| `Nit` | style, naming, readability |
+| 🔴 `Critical` | data loss, security vulnerability, crash in a core path |
+| 🟠 `High` | incorrect behavior visible to users, broken contract |
+| 🟡 `Medium` | logic error in a non-critical path, missing validation |
+| 🔵 `Low` | edge case or missing guard with future impact |
+| 🔹 `Nit` | style, naming, readability |
 
 **examples**
 
