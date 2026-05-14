@@ -1,4 +1,4 @@
-# review
+# review skill
 
 A skill for agents that performs deep, evidence-first code review on local working-tree changes, staged diffs, branch comparisons, or GitHub PRs and issues — read-only by default, with structured severity-annotated output.
 
